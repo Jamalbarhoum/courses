@@ -21,7 +21,6 @@ CREATE TABLE role_permission (
     PRIMARY KEY (id)
 );
 
-
 CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
     username VARCHAR(50) UNIQUE NOT NULL,
