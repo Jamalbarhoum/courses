@@ -13,10 +13,12 @@ app.use(cors());
 const RouterRole = require("./routes/roles")
 const PermissionRouter = require("./routes/permission")
 const RolePermissionRouter = require("./routes/role_permission")
+const UserRouter = require("./routes/user")
 
 app.use("/role",RouterRole)
 app.use("/Permission",PermissionRouter)
 app.use("/RolePermissionRouter",RolePermissionRouter)
+app.use("/user",UserRouter)
 
 
 app.listen(PORT, () => {
