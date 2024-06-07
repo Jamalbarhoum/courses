@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 
 function NavbarR() {
   const redirect = useNavigate()
-  const { isLogin } = useContext(Context);
+  const { isLogin,setIsLogin,setToken } = useContext(Context);
   return (
     <div>
       {" "}
@@ -30,7 +30,11 @@ function NavbarR() {
                 <Nav.Link onClick={()=>{
                   redirect("/courses")
                 }}>Courses</Nav.Link>
-                <Nav.Link >Logout</Nav.Link>
+                <Nav.Link onClick={()=>{
+                  localStorage.clear()
+                  setIsLogin(false)
+                  setToken(null)
+                }} >Logout</Nav.Link>
               </Nav>
             )}
           </Nav>

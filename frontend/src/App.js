@@ -2,17 +2,19 @@ import NavbarR from "./components/Navbar/NavbarR";
 
 import { createContext, useEffect, useState } from "react";
 import Cord from "./components/Cord/Cord";
-import { Routes,Route } from "react-router";
+import { Routes, Route } from "react-router";
 import LoginInfo from "./components/Login/LoginInfo";
 import Header from "./components/Header/Header";
 import Courses from "./components/Courses/Courses";
 export const Context = createContext();
 function App() {
-  useEffect(()=>{
-    localStorage.getItem("token")
-  },[])
-  const [isLogin, setIsLogin] = useState(localStorage.getItem("token") || false);
-  const [token,setToken] = useState(localStorage.getItem("token") || null)
+  useEffect(() => {
+    localStorage.getItem("token");
+  }, []);
+  const [isLogin, setIsLogin] = useState(
+    localStorage.getItem("token") || false
+  );
+  const [token, setToken] = useState(localStorage.getItem("token") || null);
   return (
     <>
       <Context.Provider
@@ -20,22 +22,15 @@ function App() {
           isLogin,
           setIsLogin,
           token,
-          setToken
+          setToken,
         }}
       >
-       
-          <NavbarR />
+        <NavbarR />
         <Routes>
-        <Route path="/login" element={<LoginInfo /> } />
-        <Route path="/courses" element={<Courses/> } />
-        <Route path="/" element={<Header /> } />
- \
-
-        
-      </Routes>
-       
-     
-   
+          <Route path="/login" element={<LoginInfo />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/" element={<Header />} />
+        </Routes>
       </Context.Provider>
     </>
   );
