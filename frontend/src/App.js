@@ -1,10 +1,14 @@
 
-
-
+import NavbarR from "./components/Navbar/NavbarR";
+import Mems from "./components/mems/Mems";
 function App() {
   return (
     <div className="App">
-        <h1>hello word</h1>
+        <Mems/>
+        <NavbarR/>
+     
+     
+
     </div>
   );
 }
