@@ -1,0 +1,36 @@
+.Container-header{
+ 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+  }
+  
+  .Left-side{
+  width: 20%;
+  }
+  
+  .Right-side{
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+  
+  }
+  .image-header{
+    width: 70%;
+    height: 100%;
+    border-radius: 30rem 30rem 0 0 ;
+    border: 7px solid rgb(80, 80, 79);
+  }
+  .up{
+    background-color: rgb(255, 255, 255);
+   
+  }
+  .content-header{
+    color: #383838;
+   
+    font-family: "Rakkas", serif;
+    font-size: 10px;
+    font-weight: 200px;
+    font-style: normal;
+  }

@@ -6,9 +6,9 @@ const Register = async (req, res) => {
   const { username, password, email, role } = req.body;
 
   const password_hash = await bcrypt.hash(password, 4);
-  const UserNameNew = username.toLowerCase();
-  const UserName = UserNameNew.replace(/^\s+|\s+$/gm, "");
-  const Email = email.toLowerCase();
+  const UserNameNew = username?.toLowerCase();
+  const UserName = UserNameNew?.replace(/^\s+|\s+$/gm, "");
+  const Email = email?.toLowerCase();
 
   if (!password.replace(/^\s+|\s+$/gm, ""))
     return res.status(400).json({ message: "password cannot be empty" });
@@ -62,7 +62,7 @@ const Register = async (req, res) => {
 const login = async (req, res) => {
   const { password, email } = req.body;
 
-  const Email = email.toLowerCase();
+  const Email = email?.toLowerCase();
 
   const query = `SELECT * from users where email='${Email}'`;
 
