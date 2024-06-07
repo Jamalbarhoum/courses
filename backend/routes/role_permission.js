@@ -6,7 +6,7 @@ const RolePermissionRouter = express.Router()
 
 
 RolePermissionRouter.post("/",CreateRolePermission)
-RolePermissionRouter.get("/",authentication,authorization("CreateNewCourse"),allRolePermission)
+RolePermissionRouter.get("/",authentication,allRolePermission)
 
 
 

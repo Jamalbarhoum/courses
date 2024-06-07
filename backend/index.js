@@ -14,11 +14,18 @@ const RouterRole = require("./routes/roles")
 const PermissionRouter = require("./routes/permission")
 const RolePermissionRouter = require("./routes/role_permission")
 const UserRouter = require("./routes/user")
+const coursesRouter = require("./routes/courses")
 
 app.use("/role",RouterRole)
 app.use("/Permission",PermissionRouter)
 app.use("/RolePermissionRouter",RolePermissionRouter)
 app.use("/user",UserRouter)
+app.use("/courses",coursesRouter)
+
+
+
+
+app.use("*", (req, res) => res.status(404).json("NO content at this path"));
 
 
 app.listen(PORT, () => {
