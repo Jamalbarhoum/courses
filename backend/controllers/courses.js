@@ -58,7 +58,7 @@ const deleteCourse = (req, res) => {
     });
 };
 
-//! API =>  http://localhost:5000/courses/priv  {get}
+//! API =>  http://localhost:5000/courses/allPriv  {get}
 
 // All private courses in this teacher
 const allCoursesForOneTeacher = (req, res) => {
@@ -120,10 +120,58 @@ const allCourses = (req, res) => {
       });
     });
 };
+// ! http://localhost:5000/courses/solo/9 {get}
+// 1 course solo
+const getCourseById = (req, res) => {
+  const Course_id = req.params.id;
+  const query = `select * from courses where id = ${Course_id}`;
+  pool
+    .query(query)
+    .then((result) => {
+      res.status(200).json({
+        success: true,
+        message: "1 course",
+        result: result.rows,
+      });
+    })
+    .catch((err) => {
+      return res.status(500).json({
+        success: false,
+        message: "server error",
+        error: err,
+      });
+    });
+};
+//! API http://localhost:5000/courses/:id  {put}
+ const updateCourse = (req, res) => {
+  const { name, description, image } = req.body;
+  const Course_id = req.params.id;
+  const value = [name, description, image, Course_id];
+  const query = `UPDATE courses SET name=COALESCE($1,name),description=COALESCE($2,description) ,image=COALESCE($3,image) WHERE id=$4 RETURNING *;`;
+
+  pool
+    .query(query, value)
+    .then((result) => {
+      res.status(201).json({
+        success: true,
+        message: "update Successful",
+        result: result.rows,
+      });
+    })
+    .catch((err) => {
+      return res.status(500).json({
+        success: false,
+        message: "server error",
+        error: err,
+      });
+    });
+};
 
 module.exports = {
   CreateNewCourse,
   deleteCourse,
   allCoursesForOneTeacher,
   allCourses,
+  getCourseById,
+  updateCourse,
 };
