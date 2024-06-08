@@ -7,7 +7,7 @@ import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 function LoginInfo() {
-  const {setToken,token,setIsLogin} = useContext(Context)
+  const {setToken,token,setIsLogin ,setRoleID} = useContext(Context)
   const redirect = useNavigate();
   const [messageError,setMessageError] = useState("")
   const [data, setData] = useState({
@@ -18,11 +18,14 @@ function LoginInfo() {
   const login = ()=>{
  
     axios.post('http://localhost:5000/user/login',data).then((result)=>{
-        console.log(result.data.token);
-       
-        setToken(localStorage.getItem("token"))
+        console.log(result.data.role);
+        localStorage.setItem("R",result.data.role)
+        setRoleID(localStorage.getItem("R") *1)
         localStorage.setItem("token",result.data.token)
+        setToken(localStorage.getItem("token"))
+      
      
+      
         setIsLogin(true)
         redirect("/")
        
@@ -79,7 +82,7 @@ function LoginInfo() {
               />
             </div>
             <div class="btn">
-              <button onClick={(e)=>{
+              <button style={{backgroundColor:"green"}} onClick={(e)=>{
                 e.preventDefault()
                 login()
                 console.log(data);
@@ -87,11 +90,15 @@ function LoginInfo() {
               }} class="button1">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               </button>
-              <button class="button2">Register</button>
+              <button class="button2"    onClick={(e) => {
+                e.preventDefault()
+                redirect("/Register");
+              }}>Register</button>
             </div>
             <button
               class="button3"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault()
                 redirect("/");
               }}
             >

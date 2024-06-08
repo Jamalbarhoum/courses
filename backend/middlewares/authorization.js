@@ -22,6 +22,7 @@ where Permissions.permission = '${string}' and role_id = ${id_role}`
         res.status(400).json({ message: "unauthorized" });
       });
   };
+  
 };
 
 module.exports = authorization;

@@ -5,10 +5,9 @@ const bcrypt = require("bcrypt");
 const Register = async (req, res) => {
   const { username, password, email, role } = req.body;
 
-  const password_hash = await bcrypt.hash(password, 4);
-  const UserNameNew = username?.toLowerCase();
-  const UserName = UserNameNew?.replace(/^\s+|\s+$/gm, "");
-  const Email = email?.toLowerCase();
+  if(!username|| !password  ||  !email || !role ){
+    return res.status(400).json({ message: "cannot be empty" });
+  }
 
   if (!password.replace(/^\s+|\s+$/gm, ""))
     return res.status(400).json({ message: "password cannot be empty" });
@@ -17,6 +16,11 @@ const Register = async (req, res) => {
       .status(400)
       .json({ message: "password It must be six characters or more" });
   }
+  const password_hash = await bcrypt.hash(password, 4);
+  const UserNameNew = username?.toLowerCase();
+  const UserName = UserNameNew?.replace(/^\s+|\s+$/gm, "");
+  const Email = email?.toLowerCase();
+
   function isValidEmail(email) {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
@@ -106,6 +110,7 @@ const login = async (req, res) => {
         success: true,
         massage: "Valid login credentials",
         token: token,
+        role: data_user.role_id
       });
     })
     .catch((err) => {
