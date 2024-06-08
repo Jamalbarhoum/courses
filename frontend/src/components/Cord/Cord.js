@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from "react";
+
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
@@ -8,11 +9,16 @@ import "./Card.css";
 import { Context } from "../../App";
 import axios from "axios";
 function Cord() {
+  const redirect = useNavigate();
   const { isLogin, token } = useContext(Context);
-  const [data_courses,setDataCourses] =useState([])
+  const [data_courses, setDataCourses] = useState([]);
+  const goHome = () => {
+    redirect("/");
+  };
+
   useEffect(() => {
-    if(!isLogin){
-     
+    if (!isLogin) {
+      goHome();
     }
     axios
       .get(`http://localhost:5000/courses/ `, {
@@ -21,20 +27,22 @@ function Cord() {
         },
       })
       .then((result) => {
-        setDataCourses(result.data.result)
+        setTimeout(() => {
+          setDataCourses(result.data.result);
+        }, 0);
         // console.log(result.data.result);
-     
       })
       .catch((err) => {
         console.log(err);
-       
       });
+    return () => {
+      setDataCourses([]);
+    };
   }, []);
 
-  const redirect = useNavigate();
   return (
     <>
-      {!data_courses ? (
+      {data_courses.length === 0 ? (
         <div
           style={{
             height: "80vh",
@@ -49,14 +57,12 @@ function Cord() {
         </div>
       ) : (
         <>
-        
           {data_courses?.map((elm, index) => {
             return (
               <>
                 <Card className="Card_vis">
                   <Card.Img
                     className="img_card"
-                
                     variant="top"
                     src={elm.image}
                   />
@@ -82,7 +88,6 @@ function Cord() {
           })}
         </>
       )}
-     
     </>
   );
 }

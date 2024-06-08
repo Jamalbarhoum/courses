@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div style={{width:"100%"}}>
+    <div style={{width:"100%",marginTop:"40px"}}>
       <div style={{width:"100%"}}>
         <footer
           class="text-center text-lg-start text-white"
@@ -13,12 +13,10 @@ function Footer() {
               <div class="row">
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                   <h6 class="text-uppercase mb-4 font-weight-bold">
-                    Company name
+                    pp code 
                   </h6>
                   <p>
-                    Here you can use rows and columns to organize your footer
-                    content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit.
+                  Discover a world of programming with our comprehensive courses designed for all levels, from beginners to professionals.
                   </p>
                 </div>
 
@@ -27,36 +25,32 @@ function Footer() {
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                   <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
                   <p>
-                    <a class="text-white">MDBootstrap</a>
+                    <a class="text-white">js</a>
                   </p>
                   <p>
-                    <a class="text-white">MDWordPress</a>
+                    <a class="text-white">php</a>
                   </p>
                   <p>
-                    <a class="text-white">BrandFlow</a>
+                    <a class="text-white">node</a>
                   </p>
                   <p>
-                    <a class="text-white">Bootstrap Angular</a>
+                    <a class="text-white">react</a>
                   </p>
                 </div>
 
                 <hr class="w-100 clearfix d-md-none" />
 
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                  <h6 class="text-uppercase mb-4 font-weight-bold">
-                    Useful links
-                  </h6>
+                <h6 class="text-uppercase mb-4 font-weight-bold">info</h6>
                   <p>
-                    <a class="text-white">Your Account</a>
+                    <a class="text-white">jamallbarhoum@gmail.com</a>
                   </p>
                   <p>
-                    <a class="text-white">Become an Affiliate</a>
+                    <a class="text-white">jamal barhoum</a>
                   </p>
+                 
                   <p>
-                    <a class="text-white">Shipping Rates</a>
-                  </p>
-                  <p>
-                    <a class="text-white">Help</a>
+                    <a class="text-white">PP</a>
                   </p>
                 </div>
 
@@ -65,16 +59,16 @@ function Footer() {
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                   <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
                   <p>
-                    <i class="fas fa-home mr-3"></i> New York, NY 10012, US
+                    <i class="fas fa-home mr-3"></i> jordan 
                   </p>
                   <p>
-                    <i class="fas fa-envelope mr-3"></i> info@gmail.com
+                    <i class="fas fa-envelope mr-3"></i> jamallbarhoum@gmail.com
                   </p>
                   <p>
-                    <i class="fas fa-phone mr-3"></i> + 01 234 567 88
+                    <i class="fas fa-phone mr-3"></i>0795956217
                   </p>
                   <p>
-                    <i class="fas fa-print mr-3"></i> + 01 234 567 89
+                    <i class="fas fa-print mr-3"></i> 0795956217
                   </p>
                 </div>
               </div>
@@ -93,35 +87,6 @@ function Footer() {
                   </div>
                 </div>
 
-                <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-                  <a
-                    class="btn btn-outline-light btn-floating m-1 text-white"
-                    role="button"
-                  >
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-
-                  <a
-                    class="btn btn-outline-light btn-floating m-1"
-                    role="button"
-                  >
-                    <i class="fab fa-twitter"></i>
-                  </a>
-
-                  <a
-                    class="btn btn-outline-light btn-floating m-1"
-                    role="button"
-                  >
-                    <i class="fab fa-google"></i>
-                  </a>
-
-                  <a
-                    class="btn btn-outline-light btn-floating m-1"
-                    role="button"
-                  >
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </div>
               </div>
             </section>
           </div>

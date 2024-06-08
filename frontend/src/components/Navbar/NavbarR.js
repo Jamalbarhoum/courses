@@ -33,7 +33,7 @@ function NavbarR() {
                 >
                   Login
                 </Nav.Link>
-                <Nav.Link
+                <Nav.Link       style={{ color: "#fff" }}
                   onClick={() => {
                     redirect("/Register");
                   }}

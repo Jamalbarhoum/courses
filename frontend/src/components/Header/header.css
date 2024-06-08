@@ -23,7 +23,7 @@
     border: 7px solid rgb(80, 80, 79);
   }
   .up{
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
    
   }
   .content-header{
@@ -34,3 +34,11 @@
     font-weight: 200px;
     font-style: normal;
   }
+
+.section {
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
