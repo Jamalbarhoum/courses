@@ -23,8 +23,8 @@ function Teacher() {
   const handleShow = () => setShow(true);
 
   const [showUpdate, setShowUpdate] = useState(false);
-  const handleCloseUpdate = () => setShow(false);
-  const handleShowUpdate = () => setShow(true);
+  const handleCloseUpdate = () => setShowUpdate(false);
+  const handleShowUpdate = () => setShowUpdate(true);
 
   const [toggle, setToggle] = useState(false);
   const [IdCourseForDelete, setIdCourseForDelete] = useState(0);
@@ -83,14 +83,15 @@ function Teacher() {
         },
       })
       .then((result) => {
-        setData(data.map((elm,index)=>{
-            if(elm.id == DataForUpdate.id){
-                elm = DataForUpdate
-               
+        setData(
+          data.map((elm, index) => {
+            if (elm.id == DataForUpdate.id) {
+              elm = DataForUpdate;
             }
-            return elm
-        }))
-        setDataForUpdate({})
+            return elm;
+          })
+        );
+        setDataForUpdate({});
       })
       .catch((err) => {
         console.log(err);
@@ -122,7 +123,7 @@ function Teacher() {
 
   return (
     <>
-      {data.length === 0 && (
+      {false && (
         <div
           style={{
             height: "80vh",
@@ -153,7 +154,7 @@ function Teacher() {
             }}
             className="btn btn-secondary"
           >
-            add Course
+            add New Course
           </button>
         </div>
         <div
@@ -187,8 +188,15 @@ function Teacher() {
               return (
                 <>
                   <tr>
-                    <td>{elm.name}</td>
-                    <td>{elm.description}</td>
+                    <td>
+                      {" "}
+                      <h5>{elm.name}</h5>
+                    </td>
+
+                    <td>
+                      <p>{elm.description}</p>
+                    </td>
+
                     <td>
                       {" "}
                       <Col style={{ width: "100%" }} xs={6} md={4}>
@@ -198,7 +206,8 @@ function Teacher() {
                         />
                       </Col>
                     </td>
-                    <td>
+
+                    <td style={{ width: "200px" }}>
                       <Col style={{ width: "100%" }} xs={6} md={4}>
                         <DropdownButton
                           id="dropdown-basic-button"
@@ -249,7 +258,7 @@ function Teacher() {
               </Button>
             </Modal.Footer>
           </Modal>
-          <Modal show={show} onHide={handleCloseUpdate}>
+          <Modal show={showUpdate} onHide={handleCloseUpdate}>
             <Modal.Header closeButton>
               <Modal.Title>Update Course</Modal.Title>
             </Modal.Header>
@@ -308,10 +317,13 @@ function Teacher() {
               <Button variant="secondary" onClick={handleCloseUpdate}>
                 Close
               </Button>
-              <Button onClick={() => {
-                handleCloseUpdate()
-                updateCourse(DataForUpdate.id)
-              }} variant="primary">
+              <Button
+                onClick={() => {
+                  handleCloseUpdate();
+                  updateCourse(DataForUpdate.id);
+                }}
+                variant="primary"
+              >
                 Update Course
               </Button>
             </Modal.Footer>

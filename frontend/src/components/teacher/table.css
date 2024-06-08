@@ -1,9 +1,9 @@
 table{
     border: 3px solid rgb(196, 191, 191);
-        width: 80%;
+      width: 90%;
 }
 .cont-table{
-    width: 100%;
+    
 display: flex;
 justify-content: center;
 align-items: center;
@@ -13,16 +13,22 @@ align-items: center;
 table tr ,table tr td ,table tr th {
     padding: 10px;
     border: 2px solid rgb(185, 185, 185);
-    align-items: center;
-    text-align: center;
-    width: 100px;
-    height: 100px;
+
+
+ 
     overflow: hidden;
    
 }
-table tr td {
-    width: 30%;
+table tr th {
+    text-align: center;
    
+}
+table tr td {
+    box-sizing: border-box;
+
+width: 350px;
+height: 350px;
+overflow-y: auto;
 
 }
 .formUpdate{
@@ -30,4 +36,7 @@ table tr td {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+table tr td *{
+    text-align: center;
 }
