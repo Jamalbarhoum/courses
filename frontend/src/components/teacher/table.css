@@ -1,0 +1,27 @@
+table{
+    border: 3px solid rgb(196, 191, 191);
+        width: 80%;
+}
+.cont-table{
+    width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+table tr ,table tr td ,table tr th {
+    padding: 10px;
+    border: 2px solid rgb(185, 185, 185);
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+   
+}
+table tr td {
+    width: 30%;
+   
+
+}

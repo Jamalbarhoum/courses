@@ -1,0 +1,30 @@
+
+
+  input[type="file"] {
+    font-family: monospace;
+  
+    text-rendering: auto;
+  
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    resize: auto;
+    cursor: text;
+    overflow-wrap: break-word;
+    background-color: field;
+    column-count: initial !important;
+    margin: 0em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(118, 118, 118);
+    border-image: initial;
+    padding: 2px;
+    white-space: pre-wrap;
+  }

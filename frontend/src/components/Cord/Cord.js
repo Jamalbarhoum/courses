@@ -9,7 +9,7 @@ import { Context } from "../../App";
 import axios from "axios";
 function Cord() {
   const { isLogin, token } = useContext(Context);
-  const [data_courses,setDataCourses] =useState()
+  const [data_courses,setDataCourses] =useState([])
   useEffect(() => {
     if(!isLogin){
      
@@ -22,7 +22,7 @@ function Cord() {
       })
       .then((result) => {
         setDataCourses(result.data.result)
-        console.log(result.data.result);
+        // console.log(result.data.result);
      
       })
       .catch((err) => {
@@ -30,7 +30,7 @@ function Cord() {
        
       });
   }, []);
-  console.log(data_courses);
+
   const redirect = useNavigate();
   return (
     <>

@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React, { useState,useContext, useEffect } from "react";
 import "./LoginInfo.css";
 import { Context } from "../../App";
 import Login, { Render } from "react-login-page";
@@ -7,6 +7,9 @@ import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 function LoginInfo() {
+
+
+
   const {setToken,token,setIsLogin ,setRoleID} = useContext(Context)
   const redirect = useNavigate();
   const [messageError,setMessageError] = useState("")
@@ -14,6 +17,18 @@ function LoginInfo() {
     password: null,
     email: null,
   });
+
+
+useEffect(()=>{
+  if(token){
+    redirect("/")
+  }
+},[])
+
+
+
+
+
 
   const login = ()=>{
  

@@ -4,7 +4,6 @@ import "./Nav.css";
 import { Context } from "../../App";
 import { useNavigate } from "react-router";
 
-
 function NavbarR() {
   const redirect = useNavigate();
   const { isLogin, setIsLogin, setToken, roleID } = useContext(Context);
@@ -12,11 +11,12 @@ function NavbarR() {
   return (
     <div>
       {" "}
-      <Navbar bg="light" data-bs-theme="light">
+      <Navbar style={{ backgroundColor: "rgb(83,92,112)" }}>
         <Container>
-          <Navbar.Brand>Navbar</Navbar.Brand>
+          <Navbar.Brand style={{ color: "#fff" }}>pp code</Navbar.Brand>
           <Nav className="ma-auto">
             <Nav.Link
+              style={{ color: "#fff" }}
               onClick={() => {
                 redirect("/");
               }}
@@ -26,33 +26,50 @@ function NavbarR() {
             {!isLogin ? (
               <Nav>
                 <Nav.Link
+                  style={{ color: "#fff" }}
                   onClick={() => {
                     redirect("/login");
                   }}
                 >
                   Login
                 </Nav.Link>
-                <Nav.Link onClick={()=>{
-                  redirect("/Register")
-                }}>Register</Nav.Link>
-            
+                <Nav.Link
+                  onClick={() => {
+                    redirect("/Register");
+                  }}
+                >
+                  Register
+                </Nav.Link>
               </Nav>
             ) : (
               <Nav>
                 <Nav.Link
+                  style={{ color: "#fff" }}
                   onClick={() => {
                     redirect("/courses");
                   }}
                 >
                   Courses
                 </Nav.Link>
-                {roleID * 1 == 2 ? <Nav.Link>teacher</Nav.Link>:<Nav.Link>student</Nav.Link>}
+                {roleID * 1 == 2 ? (
+                  <Nav.Link
+                    style={{ color: "#fff" }}
+                    onClick={() => {
+                      redirect("/Teacher");
+                    }}
+                  >
+                    teacher
+                  </Nav.Link>
+                ) : (
+                  <Nav.Link>student</Nav.Link>
+                )}
                 <Nav.Link
+                  style={{ color: "#fff" }}
                   onClick={() => {
                     localStorage.clear();
                     setIsLogin(false);
                     setToken(null);
-                    redirect("/")
+                    redirect("/");
                   }}
                 >
                   Logout
