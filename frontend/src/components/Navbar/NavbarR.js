@@ -9,11 +9,13 @@ function NavbarR() {
   const { isLogin, setIsLogin, setToken, roleID } = useContext(Context);
 
   return (
-    <div>
+    <div style={{position:"fixed" ,width:"100%"}}>
       {" "}
       <Navbar style={{ backgroundColor: "rgb(83,92,112)" }}>
         <Container>
-          <Navbar.Brand style={{ color: "#fff" }}>pp code</Navbar.Brand>
+          <Navbar.Brand style={{ color: "#fff" ,width:"80px" ,position:"relative"}}>
+            <img style={{width:"100%",position:"absolute",top:"-35px"}} src="Logo.svg"/>
+          </Navbar.Brand>
           <Nav className="ma-auto">
             <Nav.Link
               style={{ color: "#fff" }}

@@ -40,3 +40,11 @@ CREATE TABLE courses (
     FOREIGN KEY (teacher_id) REFERENCES users (id) ON DELETE CASCADE
 );
 
+CREATE TABLE enrollments (
+    id SERIAL PRIMARY KEY,
+    student_id INT NOT NULL,
+    course_id INT NOT NULL,
+    enrolled_at TIMESTAMP DEFAULT NOW(),
+    FOREIGN KEY (student_id) REFERENCES users (id) ON DELETE CASCADE,
+    FOREIGN KEY (course_id) REFERENCES courses (id) ON DELETE CASCADE
+);
