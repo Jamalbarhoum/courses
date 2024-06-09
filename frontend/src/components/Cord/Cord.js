@@ -73,7 +73,7 @@ function Cord() {
                     <Button
                       onClick={() => {
                         redirect({
-                          pathname: "Info",
+                          pathname: "/ViewCourse",
                           search: `?idx=${elm.id}`,
                         });
                       }}

@@ -9,6 +9,7 @@ import Courses from "./components/Courses/Courses";
 import Register from "./components/Register/Register";
 import Teacher from "./components/teacher/Teacher";
 import Footer from "./components/footer/Footer";
+import ViewCourse from "./components/ViewCourse/ViewCourse";
 export const Context = createContext();
 function App() {
   useEffect(() => {
@@ -37,6 +38,7 @@ function App() {
           <Route path="//Register" element={<Register />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/Teacher" element={<Teacher />} />
+          <Route path="/ViewCourse" element={<ViewCourse />} />
           <Route path="/" element={<Header />} />
           <Route path="/" element={<Header />} />
         </Routes>

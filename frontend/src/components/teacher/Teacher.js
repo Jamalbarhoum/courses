@@ -193,22 +193,22 @@ function Teacher() {
                       <h5>{elm.name}</h5>
                     </td>
 
-                    <td>
-                      <p>{elm.description}</p>
+                    <td style={{ overflowY: "auto"}}>
+                      <p style={{height:"200px"}} >{elm.description}</p>
                     </td>
 
                     <td>
                       {" "}
-                      <Col style={{ width: "100%" }} xs={6} md={4}>
-                        <Image
-                          style={{ width: "100%", height: "300px" }}
+                      <Col xs={12} xm={12} xl={12} style={{minWidth:"150px"}}>
+                        <img style={{width:"100%"}} className="image-table"
+                          // style={{ width: "100%", height: "300px" }}
                           src={elm.image}
                         />
                       </Col>
                     </td>
 
-                    <td style={{ width: "200px" }}>
-                      <Col style={{ width: "100%" }} xs={6} md={4}>
+                    <td>
+                      <Col>
                         <DropdownButton
                           id="dropdown-basic-button"
                           title="Delete or modify"

@@ -131,7 +131,7 @@ const getCourseById = (req, res) => {
       res.status(200).json({
         success: true,
         message: "1 course",
-        result: result.rows,
+        result: result.rows[0],
       });
     })
     .catch((err) => {

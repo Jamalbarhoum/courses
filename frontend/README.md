@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+<p align="center">
+<a  target="_blank" rel="noopener noreferrer">
+ <img width="400px" height="100px" src="logo PP Code.png" alt="Project logo">
+ </a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">PP Code
+</h3>
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+<p align="center">
+<h4>Introduction</h4>
+The Education Technology website aims to provide a secure and efficient environment for knowledge exchange between teachers and students. The site allows teachers to publish and manage lessons while enabling students to access lessons after logging in.
 
-### `npm start`
+    
+<a href=''>Demo</a>
+<br> 
+    <br> 
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📝 Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Usage](#usage)
+- [Built Using](#built_using)
+- [User Story](#user_story)
+- [Data Flow](#data_flow)
+- [Guided By](#guided_by)
 
-### `npm test`
+## 🧐 About <a name = "about"></a>
+<h3>Website Creation Objectives:</h3>
+<br>
+The Education Technology website aims to provide a secure and efficient environment for knowledge exchange between teachers and students. The site allows teachers to publish and manage lessons while enabling students to access lessons after logging in. 
+<br>
+<h3>Expected Benefits:</h3>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<ul>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🏁 Getting Started <a name = "getting_started"></a>
 
-## Learn More
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Visual Studio Code follow this <a href='https://code.visualstudio.com/download'>link</a> to install.
+- Git Bash follow this <a href='https://git-scm.com/downloads'>link</a> to install.
+- Node.js follow this <a href='https://nodejs.org/en/download'>link</a> to install.
 
-### Code Splitting
+### Installing:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clone the repo to your local machine using git bash.
 
-### Analyzing the Bundle Size
+```
+git clone https://github.com/Jamalbarhoum/courses.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Install packeges repeat this step in backend and frontend folder
 
-### Making a Progressive Web App
+```
+npm i
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Run server using git bash inside backend folder
 
-### Advanced Configuration
+```
+npm run dev
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. Run application using git bash inside frontend folder
 
-### Deployment
+```
+npm run start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Now app ready to use
 
-### `npm run build` fails to minify
+## 🎈 Usage <a name="usage"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Sure, here is the revised text in English:
+
+To use our website, you need to log in, whether you are a student or a teacher. When registering, select your role as either a student or a teacher.
+
+If you are a teacher:
+
+Upon logging in, you will see the "Teacher Dashboard" at the top of the page.
+You can upload lessons with images, descriptions, and titles.
+You have the ability to edit or delete your own lessons.
+View all courses under the "Courses" section at the top of the page.
+If you are a student:
+
+You can browse all available courses.
+You can enroll in new courses uploaded by teachers.
+This text outlines the functionality for both teachers and students clearly and concisely, focusing on their respective capabilities upon logging into the website.
+
+## ⛏️ Built Using <a name = "built_using"></a>
+
+
+
+
+- [PostGresSQL](https://www.postgresql.org/) - Database
+- [Express JS](https://expressjs.com/) - Server Framework
+- [React JS](https://https://reactjs.org/) - Web Framework
+- [Node JS](https://nodejs.org/en/) - Server Environment
+
+
+
+This project is guided by ©️jamal Barhoum

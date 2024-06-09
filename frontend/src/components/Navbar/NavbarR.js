@@ -58,7 +58,7 @@ function NavbarR() {
                       redirect("/Teacher");
                     }}
                   >
-                    teacher
+                    Teacher Dashboard
                   </Nav.Link>
                 ) : (
                   <Nav.Link>student</Nav.Link>
