@@ -1,6 +1,6 @@
 <p align="center">
 <a  target="_blank" rel="noopener noreferrer">
- <img width="400px" height="100px" src="logo PP Code.png" alt="Project logo">
+ <img width="400px" height="100px" src="https://static.vecteezy.com/system/resources/previews/019/582/780/non_2x/plastic-recycling-code-symbol-pp-recycling-symbol-for-plastic-simple-flat-icon-vector.jpg" alt="Project logo">
  </a>
 </p>
 
@@ -37,12 +37,6 @@ The Education Technology website aims to provide a secure and efficient environm
 <h3>Expected Benefits:</h3>
 
 <ul>
-
-
-
-
-
-
 
 
 
