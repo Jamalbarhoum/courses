@@ -81,12 +81,7 @@ npm run dev
 npm run start
 ```
 
-Now app ready to use
-
-## 🎈 Usage <a name="usage"></a>
-
-
-Sure, here is the revised text in English:
+ready to use
 
 To use our website, you need to log in, whether you are a student or a teacher. When registering, select your role as either a student or a teacher.
 
@@ -96,6 +91,9 @@ Upon logging in, you will see the "Teacher Dashboard" at the top of the page.
 You can upload lessons with images, descriptions, and titles.
 You have the ability to edit or delete your own lessons.
 View all courses under the "Courses" section at the top of the page.
+
+
+
 If you are a student:
 
 You can browse all available courses.
