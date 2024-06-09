@@ -9,7 +9,7 @@ function NavbarR() {
   const { isLogin, setIsLogin, setToken, roleID } = useContext(Context);
 
   return (
-    <div style={{position:"fixed" ,width:"100%"}}>
+    <div style={{ width:"100%"}}>
       {" "}
       <Navbar style={{ backgroundColor: "rgb(83,92,112)" }}>
         <Container>
