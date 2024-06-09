@@ -101,7 +101,7 @@ This text outlines the functionality for both teachers and students clearly and 
 
 - [PostGresSQL](https://www.postgresql.org/) - Database
 - [Express JS](https://expressjs.com/) - Server Framework
-- [React JS](https://https://reactjs.org/) - Web Framework
+- [React JS](https://https://reactjs.org/) - JavaScript library
 - [Node JS](https://nodejs.org/en/) - Server Environment
 
 
