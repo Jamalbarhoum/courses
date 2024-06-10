@@ -102,7 +102,7 @@ const login = async (req, res) => {
         role: data_user.role_id,
       };
       console.log(payload);
-      const Secret = process.env.Secret;
+      const Secret = process.env.Secret || '01001000';
       const options = { expiresIn: "360m" };
 
       const token = jwt.sign(payload, Secret, options);

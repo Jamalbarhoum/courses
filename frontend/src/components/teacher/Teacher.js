@@ -138,7 +138,7 @@ function Teacher() {
         </div>
       )}
 
-      <div style={{ margin: "40px 0px" }}>
+      <div style={{ margin: "40px 0px",minHeight:"50vh" }}>
         <div
           style={{
             width: "100%",
