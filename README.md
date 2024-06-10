@@ -61,11 +61,14 @@ git clone https://github.com/Jamalbarhoum/courses.git
 
 ```
 npm i
+
 ```
 
 3. Run server using git bash inside backend folder
 
 ```
+
+npm install -g nodemon
 npm run dev
 ```
 
