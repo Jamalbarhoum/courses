@@ -7,7 +7,7 @@ const authentication = (req, res, next) => {
 
     const token = req.headers.authorization.split(" ").pop();
 
-    jwt.verify(token, process.env.Secret, (err, result) => {
+    jwt.verify(token,'01001000', (err, result) => {
       if (err) {
         res.status(403).json({
           success: false,
@@ -19,7 +19,8 @@ const authentication = (req, res, next) => {
       }
     });
   } catch (error) {
-    res.status(403).json({ message: "forbidden" });
+    console.log(error);
+    res.status(500).json({ message: "Server Error" });
   }
 };
 
